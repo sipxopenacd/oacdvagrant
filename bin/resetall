@@ -55,5 +55,8 @@ echo "Overriding sipx.cf eth1"
 echo "Overriding /etc/hosts"
 sudo cp ~/conf/hosts /etc/hosts
 
+echo "Restoring base set-up"
+sudo ~/install/bin/sipxconfig-archive --restore ~/backup/base.tar.gz
+
 echo "Starting sipx"
 sudo "$SIPXECSINIT" start
