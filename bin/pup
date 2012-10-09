@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo puppet apply --verbose --debug /vagrant/manifests/base.pp

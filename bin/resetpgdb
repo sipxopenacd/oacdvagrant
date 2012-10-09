@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo /home/vagrant/install/etc/init.d/sipxconfig db drop create upgrade

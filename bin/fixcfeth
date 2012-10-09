@@ -1,0 +1,8 @@
+#!/bin/bash
+
+INSTALL=~/install
+SIPXCF="$INSTALL"/share/sipxecs/cfinputs/sipx.cf
+HOSTNAMECF="$INSTALL"/share/sipxecs/cfinputs/hostname.cf
+
+sed -i.orig -e 's/$(sys.interface)/eth1/' -e 's/$(sys.ipv4)/$(sys.ipv4[eth1])/' "$SIPXCF"
+sed -i.orig -e 's/$(sys.ipv4)/$(sys.ipv4[eth1])/' "$HOSTNAMECF"

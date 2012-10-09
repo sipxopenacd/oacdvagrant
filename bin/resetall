@@ -1,0 +1,59 @@
+#!/bin/bash
+
+INSTALL=~/install
+SIPXECSINIT="$INSTALL"/etc/init.d/sipxecs
+
+echo "Stopping sipxecs..."
+sudo "$SIPXECSINIT" stop
+
+echo "Resetting pg..."
+ ~/bin/resetpgdb
+
+echo "Resetting the set-up"
+
+## ANSWERS THE FF:
+#
+# This will wipe all configuration data from this server. Are you sure? [ enter 'y' or 'n' ] : y
+# Network settings:
+# IP address   : 10.0.2.15
+# Would you like to configure your system's  network settings? [ enter 'y' or 'n' ] : n
+# Enter just the host name of this computer?. Example: myhost. [ press enter for 'oacddev' ] : oacddev
+# Enter just the domain name of your network? Example: mydomain.com [ press enter for 'ezuce.com' ] : ezuce.com
+# Is this the first server in your cluster? [ enter 'y' or 'n' ] : y
+# Configuring as the first server...
+# Tip: Use 'oacddev.ezuce.com' as your SIP domain if you are
+# setting up for the first time or if you know you are only going to setup one
+# server. This can make configuration easier.  You can always change the value
+# later.
+# Enter SIP domain name [ press enter for 'ezuce.com' ] : oacddev.ezuce.com
+# Enter SIP realm [ press enter for 'oacddev.ezuce.com' ] : oacddev.ezuce.com
+# Initial setup, this may take a few minutes...
+
+# Finishing system configuration, almost done...
+# done.
+
+
+# In a few more minutes you will be able to access the administration
+# interface from your web browser at the following URL:
+
+#   https://oacddev.ezuce.com
+
+echo "y
+n
+oacddev
+ezuce.com
+y
+oacddev.ezuce.com
+oacddev.ezuce.com
+" | sudo ~/install/bin/sipxecs-setup --reset-all
+
+echo
+
+echo "Overriding sipx.cf eth1"
+~/bin/fixcfeth
+
+echo "Overriding /etc/hosts"
+sudo cp ~/conf/hosts /etc/hosts
+
+echo "Starting sipx"
+sudo "$SIPXECSINIT" start

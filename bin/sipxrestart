@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo ~/install/etc/init.d/sipxecs restart
