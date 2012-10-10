@@ -60,11 +60,6 @@ file { '/home/vagrant/workspace':
   group => 'vagrant',
 }
 
-file { '/home/vagrant/backup':
-  ensure => 'link',
-  target => '/vagrant/backup',
-}
-
 # Etc
 
 file { '/etc/hosts':
