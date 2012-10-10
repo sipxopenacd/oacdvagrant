@@ -3,6 +3,15 @@
 INSTALL=~/install
 SIPXCF="$INSTALL"/share/sipxecs/cfinputs/sipx.cf
 HOSTNAMECF="$INSTALL"/share/sipxecs/cfinputs/hostname.cf
+SIPXVARSVM="$INSTALL"/etc/sipxpbx/freeswitch/vars.xml.vm
 
 sed -i.orig -e 's/$(sys.interface)/eth1/' -e 's/$(sys.ipv4)/$(sys.ipv4[eth1])/' "$SIPXCF"
 sed -i.orig -e 's/$(sys.ipv4)/$(sys.ipv4[eth1])/' "$HOSTNAMECF"
+
+grep -Fq '"local_ip_v4=' "$SIPXVARSVM"
+if [ "$?" != "0" ]; then
+	sed -i.orig '/<X-PRE-PROCESS.*default_password/i\
+  <X-PRE-PROCESS cmd="set" data="local_ip_v4=10.24.7.87"/>
+' "$SIPXVARSVM"
+fi
+
