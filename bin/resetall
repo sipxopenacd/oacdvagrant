@@ -60,3 +60,18 @@ sudo ~/install/bin/sipxconfig-archive --restore ~/backup/base.tar.gz
 
 echo "Starting sipx"
 sudo "$SIPXECSINIT" start
+
+## TODO cleanup
+$( nc -z 127.0.0.1 12000 ) &> /dev/null
+is_up=$?
+tries=0
+while [ "$is_up" != "0" ] && [ "$tries" -lt "15" ]; do
+	echo "Waiting for sipxconfig to be available..."
+	sleep 3
+	$( nc -z 127.0.0.1 12000 ) &> /dev/null
+	is_up=$?
+	tries=$((tries+1))
+done
+
+echo "Sending profiles"
+~/bin/oasendprofiles
