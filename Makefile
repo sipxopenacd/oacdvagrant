@@ -27,10 +27,12 @@ openacd: oacd $(sipxopenacd_plugins) oacd/plugins/oacd_ouc
 oacd:
 	git clone git@github.com:sipxopenacd/oacd_umbrella.git oacd
 
-$(sipxopenacd_plugins): oacd
+$(sipxopenacd_plugins):
+	mkdir -p sipxopenacd/plugins
 	git clone git@github.com:sipxopenacd/$(notdir $@).git $@
 
-oacd/plugins/oacd_ouc: oacd
+oacd/plugins/oacd_ouc:
+	mkdir -p sipxopenacd/plugins
 	git clone git@github.com:ezuce/oucXopenacdWeb.git oacd/plugins/oacd_ouc
 
 .PHONY: all checkout up openacd
