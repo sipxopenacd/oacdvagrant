@@ -1,0 +1,15 @@
+#!/bin/env ruby
+
+load '~/conf/oadevenv.rb'
+
+main_p = login
+
+servers_p = main_p.link_with({:id=>'menu.locations'}).click
+f = servers_p.form_with(:id=>'refreshForm')
+
+f['checkbox'] = 'on'
+f['locations:sendProfiles'] = 'Send Profiles'
+
+f.submit
+
+puts "Sent profiles"
