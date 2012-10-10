@@ -73,5 +73,10 @@ while [ "$is_up" != "0" ] && [ "$tries" -lt "15" ]; do
 	tries=$((tries+1))
 done
 
+if [ "$tries" -ge "15" ]; then
+	echo "ERROR: Sipxecs didn't start right. Terminating."
+	exit 1
+fi
+
 echo "Sending profiles"
 ~/bin/oasendprofiles
