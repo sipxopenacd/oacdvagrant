@@ -60,6 +60,16 @@ file { '/home/vagrant/workspace':
   group => 'vagrant',
 }
 
+# oacd conf
+file { '/home/vagrant/workspace/oacd/conf/sys.config':
+  ensure => 'link',
+  target => '/home/vagrant/conf/oacd/sys.config'
+}
+file { '/home/vagrant/workspace/oacd/conf/oacd.cfg':
+  ensure => 'link',
+  target => '/home/vagrant/conf/oacd/oacd.cfg'
+}
+
 # Etc
 
 file { '/etc/hosts':
