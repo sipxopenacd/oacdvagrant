@@ -1,0 +1,46 @@
+#!/bin/env ruby
+load '~/conf/oadevenv.rb'
+
+if ARGV.length < 1
+	puts "USAGE: oaadduser USER"
+	exit 1
+end
+
+name = ARGV[0]
+password = 'password'
+vm_pin = '1234'
+sip_password = '1234'
+
+main_p = login()
+
+add_user_l = main_p.link_with(:text => /\s*Add New User\s*/)
+
+add_user_p = add_user_l.click
+add_user_f = add_user_p.form_with(:action => /NewUser,form.sdirect/)
+
+f = add_user_f
+
+f['user:userId'] = name
+f['user:lastName'] = 'last' + name
+f['user:firstName'] = 'first' + name
+f['manager'] = 'manager' + name
+f['employeeId'] = 'emp' + name
+f['cp:password'] = password
+f['cp:confirmPassword'] = password
+f['cp:password_0'] = vm_pin
+f['cp:confirmPassword_0'] = vm_pin
+f['user:sipPassword'] = sip_password
+f['emailUserAddress'] = name + '@oacddev.ezuce.com'
+f['form:ok'] = 'OK'
+
+res_p = f.submit
+
+err = res_p.at('.user-error')
+unless err.nil?
+	puts err.text
+	exit 1
+else
+	puts "User #{name} added"
+end
+
+exit 0
