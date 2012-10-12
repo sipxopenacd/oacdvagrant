@@ -1,0 +1,11 @@
+--- 01-openuc.mk	2012-10-12 18:08:09.870192927 +0800
++++ 01-openuc.mk.2	2012-10-12 18:10:07.711132836 +0800
+@@ -25,8 +25,6 @@
+ addons = \
+ 	openuc \
+ 	openuc-ivr-gridfs \
+-	sipXsbc \
+-	sipXsss \
+ 	openuc-ivr-s3 \
+ 	openuc-openfire \
+ 	microsite

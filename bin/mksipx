@@ -1,0 +1,26 @@
+#!/bin/bash
+
+BUILDROOT="$HOME"
+BUILD="$BUILDROOT"/build
+INSTALL="$BUILDROOT"/install
+
+CONFDIR="$HOME"/conf
+SIPXECSDIR="$HOME"/workspace/sipxecs
+
+echo "Creating build directories..."
+mkdir -p "$BUILD"
+mkdir -p "$INSTALL"
+
+echo "Building sipxecs Makefile..."
+cd "$SIPXECSDIR"
+autoreconf -if
+cd "$BUILD"
+"$SIPXECSDIR"/configure --prefix="$INSTALL"
+
+# Temporary workaround
+echo "Removing sipXsbc and sipXsss as add-ons..."
+patch -u "$BUILD"/mak/01-openuc.mk "$CONFDIR"/openuc.mk.in.patch
+
+echo "Building sipxecs..."
+make sipx
+rm "$INSTALL"/etc/sipxpbx/sipxecs-setuprc
