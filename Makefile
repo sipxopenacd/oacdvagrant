@@ -1,5 +1,5 @@
-bup_url := http://dl.dropbox.com/u/12546190/oacddev/backup/base20121010.tar.gz
-bup_name := base20121010.tar.gz
+bup_url := http://dl.dropbox.com/u/12546190/oacddev/backup/base20121018.tar.gz
+bup_name := base20121018.tar.gz
 
 oacd_plugin_dir = oacd/plugins
 sipxopenacd_plugins := $(oacd_plugin_dir)/oacd_web $(oacd_plugin_dir)/oacd_freeswitch $(oacd_plugin_dir)/sipxplugin
