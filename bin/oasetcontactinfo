@@ -1,0 +1,78 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'rest-client'
+require 'json'
+
+load '~/conf/oadevenv.rb'
+
+if ARGV.length < 1
+	puts "USAGE: oasetcontactinfo USER"
+	exit 1
+end
+
+url = "#{$sipxconfig_url}rest/my/contact-information"
+uname = ARGV[0]
+password = 'password'
+
+info = {"contact-information" => {
+  :jobTitle => "JbTtl #{uname}",
+  :jobDept => "Dept #{uname}",
+  :companyName => "Company #{uname}",
+  :assistantName => "Asst. #{uname}",
+  :location => "Loc #{uname}",
+  :homeAddress => {
+    :street => "home street #{uname}",
+    :city => "home city #{uname}",
+    :country => "home ctry #{uname}",
+    :state => "home state #{uname}",
+    :zip => "home zip #{uname}"
+  },
+  :officeAddress => {
+    :street => "ofc street #{uname}",
+    :city => "ofc city #{uname}",
+    :country => "ofc country #{uname}",
+    :state => "ofc state #{uname}",
+    :zip => "ofc zip #{uname}",
+    :officeDesignation => "ofc desig #{uname}"
+  },
+  :branchAddress => {},
+  :cellPhoneNumber => "cell #{uname}",
+  :homePhoneNumber => "homephn #{uname}",
+  :assistantPhoneNumber => "asstphn #{uname}",
+  :faxNumber => "fax #{uname}",
+  :didNumber => "did #{uname}",
+  :imId => "1000",
+  :alternateImId => "altim #{uname}",
+  :emailAddress => "#{uname}@oacddev.ezuce.com",
+  :alternateEmailAddress => "alt#{uname}@a.com",
+  :useBranchAddress => false,
+  :manager => "manager#{uname}",
+  :salutation => "Mr",
+  :employeeId => "emp#{uname}",
+  :twiterName => "twitter#{uname}",
+  :linkedinName => "linkedin#{uname}",
+  :facebookName => "fb#{uname}",
+  :xingName => "xing#{uname}",
+  :avatar => "https://oacddev.ezuce.com/sipxconfig/rest/avatar/1000",
+  :firstName => "first#{uname}",
+  :lastName => "last#{uname}"
+}}
+
+req = RestClient::Request.new(:url => url,
+		:user => uname,
+		:password => 'password',
+		:headers =>
+			{:accept=>:json, :content_type=>:json},
+		:payload => info.to_json,
+		# :raw_response => true,
+		:method=>:put)
+req.execute
+
+
+# RestClient::Request.new(:url => url,
+# 		:user => uname,
+# 		:password => 'password',
+# 		:headers =>
+# 			{:accept=>:json},
+# 		:method=>:get).execute
