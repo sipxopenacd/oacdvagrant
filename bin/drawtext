@@ -1,0 +1,35 @@
+#!/bin/env ruby
+
+require 'rubygems'
+require 'RMagick'
+include Magick
+
+if ARGV.length < 2
+	puts "Usage: drawtext TEXT OUTFILE"
+	exit 1
+end
+
+text = ARGV[0]
+out = ARGV[1]
+
+w = 200
+h = 200
+bg = "gray"
+
+
+fsize = 42
+
+f = Image.new(w, h) { self.background_color = bg }
+
+gc = Draw.new
+gc.fill = 'white'
+gc.stroke = 'none'
+gc.pointsize = fsize
+
+gc.annotate(f, 0, 0, 5, h/2, "AGENT")
+
+gc.fill = 'black'
+gc.annotate(f, 0, 0, 40, h/2 + fsize, text)
+
+f.write(out)
+exit

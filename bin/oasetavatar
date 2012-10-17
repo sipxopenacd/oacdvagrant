@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'tempfile'
+
+load '~/conf/oadevenv.rb'
+
+if ARGV.length < 1
+	puts "USAGE: oasetavatar USER"
+	exit 1
+end
+
+user = ARGV[0]
+password = 'password'
+
+pic = Tempfile.new(['oapic', '.png'])
+pic.close
+
+`drawtext "#{user}" "#{pic.path}"`
+
+## Page browse
+
+main_p = login(user, password)
+info_p = main_p.link_with(:id => 'menu.myInformation').click
+
+upload_f = info_p.form_with(:id => 'upload')
+upload_f.file_upload.file_name = pic.path
+upload_f['uploadbutton'] = 'Upload'
+
+upload_f.submit
+
+## Cleanup -- better done within fixed scope
+
+pic.delete
