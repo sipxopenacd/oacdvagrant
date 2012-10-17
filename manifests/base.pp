@@ -48,6 +48,9 @@ package {'mechanize': ensure => installed, provider => 'gem', require => Package
 
 package {'ImageMagick-devel': ensure => installed }
 package {'rmagick': ensure => installed, provider => 'gem', require => Package['ImageMagick-devel'] }
+
+package {'json': ensure => installed, provider => 'gem'}
+package {'rest-client': ensure => installed, provider => 'gem'}
 # Home
 
 file { '/home/vagrant/.bashrc':
