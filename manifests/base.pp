@@ -46,6 +46,8 @@ $mechanize_deps = ['libxml2-devel', 'libxslt-devel']
 package {$mechanize_deps: ensure => installed }
 package {'mechanize': ensure => installed, provider => 'gem', require => Package[$mechanize_deps]}
 
+package {'ImageMagick-devel': ensure => installed }
+package {'rmagick': ensure => installed, provider => 'gem', require => Package['ImageMagick-devel'] }
 # Home
 
 file { '/home/vagrant/.bashrc':
