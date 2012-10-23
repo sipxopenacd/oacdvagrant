@@ -3,5 +3,5 @@
 OADIR="$HOME"/workspace/oacd
 OUCDIR="$OADIR"/plugins/oacd_ouc
 
-cd "$OADIR"
+cd "$OUCDIR"
 "$OADIR"/rebar compile skip_deps=true
