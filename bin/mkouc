@@ -1,0 +1,7 @@
+#!/bin/bash
+
+OADIR="$HOME"/workspace/oacd
+OUCDIR="$OADIR"/plugins/oacd_ouc
+
+cd "$OADIR"
+"$OADIR"/rebar compile skip_deps=true
