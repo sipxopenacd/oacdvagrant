@@ -28,7 +28,8 @@ $sipx_build_deps = ['apr-devel', 'automake', 'boost-devel', 'cppunit-devel',
 'ruby-dbi', 'rubygem-daemons', 'rubygem-file-tail', 'rubygem-net-sftp',
 'ruby-libs', 'ruby-postgres', 'sec', 'sendmail', 'sendmail-cf',
 'stunnel', 'system-config-network-tui', 'tftp', 'tftp-server',
-'unixODBC', 'vsftpd', 'which', 'xerces-c', 'libtool']
+'unixODBC', 'vsftpd', 'which', 'xerces-c', 'libtool',
+'resiprocate-devel']
 
 # missing build deps: irb, java, java-fonts
 
