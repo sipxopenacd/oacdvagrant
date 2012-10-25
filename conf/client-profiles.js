@@ -1,7 +1,7 @@
 db.entity.update({'ident':'client1'}, {'$set':
     {
     	'cmpnm': 'eZuce',
-	    'avt': 'https://twimg0-a.akamaihd.net/profile_images/1116582409/twitterezuce.jpg',
+	    'avt': 'https://www.ezuce.com/image/image_gallery?uuid=1b05c8e7-63b9-49cd-bdd5-78f263763f0f&groupId=10458&t=1288976338344',
 	    'ostr': '300 Brickstone Square',
 	    'octy': 'Andover',
 	    'ocntry': 'USA',
