@@ -1,0 +1,6 @@
+#!/bin/bash
+
+OADIR="$HOME"/workspace/oacd
+
+cd "$OADIR"
+"$OADIR"/rebar get-deps compile
