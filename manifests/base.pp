@@ -51,6 +51,9 @@ package {'rmagick': ensure => installed, provider => 'gem', require => Package['
 
 package {'json': ensure => installed, provider => 'gem'}
 package {'rest-client': ensure => installed, provider => 'gem'}
+
+package {'genghisapp': ensure => installed, provider => 'gem'}
+
 # Home
 
 file { '/home/vagrant/.bashrc':
