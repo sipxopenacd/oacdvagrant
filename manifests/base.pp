@@ -35,6 +35,10 @@ $sipx_build_deps = ['apr-devel', 'automake', 'boost-devel', 'cppunit-devel',
 
 package { $sipx_build_deps: ensure => "installed", require => Yumrepo['sipXecs-testing'] }
 
+# rpm build
+package {'rpm-build': ensure => installed,}
+package {'fedora-packager': ensure => installed,}
+
 # Utils
 package {'git': ensure => installed, }
 package {'wget': ensure => installed, }

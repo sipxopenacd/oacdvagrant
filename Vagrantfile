@@ -16,6 +16,7 @@ Vagrant::Config.run do |config|
 
   config.vm.share_folder "sipxecs", "/home/vagrant/workspace/sipxecs", "sipxecs", :create => true, :nfs => true
   config.vm.share_folder "oacd", "/home/vagrant/workspace/oacd", "oacd", :create => true, :nfs => true
+  config.vm.share_folder "oarpms", "/home/vagrant/workspace/oarpms", "oarpms", :create => true, :nfs => true
 
 #  config.vm.forward_port 80, 7080 # Apache
 #  config.vm.forward_port 9000, 7090 # Play
