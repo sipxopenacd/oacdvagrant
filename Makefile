@@ -6,7 +6,7 @@ sipxopenacd_plugins := $(oacd_plugin_dir)/oacd_web $(oacd_plugin_dir)/oacd_frees
 
 all: co backup/base.tar.gz
 
-co: sipxecs sipxecs/openuc sipxecs/custom openacd
+co: sipxecs sipxecs/openuc sipxecs/custom openacd oarpms
 
 sipxecs:
 	git clone git@github.com:dhubler/sipxecs.git sipxecs
@@ -26,6 +26,9 @@ openacd: oacd $(sipxopenacd_plugins) oacd/plugins/oacd_ouc
 
 oacd:
 	git clone git@github.com:sipxopenacd/oacd_umbrella.git oacd
+
+oarpms:
+	git clone git@github.com:sipxopenacd/oarpms.git oarpms
 
 $(sipxopenacd_plugins):
 	mkdir -p sipxopenacd/plugins
