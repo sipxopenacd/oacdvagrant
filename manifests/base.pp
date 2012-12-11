@@ -23,7 +23,7 @@ $sipx_build_deps = ['apr-devel', 'automake', 'boost-devel', 'cppunit-devel',
 'fontconfig', 'freeswitch',
 'js', 'libev', 'mod_ssl', 'mongodb',
 'mongodb-server', 'net-snmp', 'net-snmp-sysvinit',
-'net-snmp-utils', 'ntp', 'openssl', 'patch', 'pcre',
+'net-snmp-utils', 'ntp', 'patch', 'pcre',
 'postgresql-odbc', 'postgresql-server', 'redis', 'rpm', 'rpm-libs',
 'ruby-dbi', 'rubygem-daemons', 'rubygem-file-tail', 'rubygem-net-sftp',
 'ruby-libs', 'ruby-postgres', 'sec', 'sendmail', 'sendmail-cf',
@@ -87,4 +87,23 @@ file { '/home/vagrant/workspace/oacd/conf/oacd.cfg':
 
 file { '/etc/hosts':
 	source => '/home/vagrant/conf/hosts'
+}
+
+# Nodejs
+
+exec {
+  'get nodejs source code':
+    command => '/usr/bin/wget http://nodejs.org/dist/v0.8.15/node-v0.8.15.tar.gz -O /tmp/node-v0.8.15.tar.gz';
+  'untar nodejs':
+    command => '/bin/tar -zxf /tmp/node-v0.8.15.tar.gz -C /tmp';
+  'configure nodejs':
+    command => "/bin/sh -c './configure'",
+    cwd => "/tmp/node-v0.8.15",
+    require => Exec['untar nodejs'];
+  'make nodejs':
+    command => '/usr/bin/make -C /tmp/node-v0.8.15',
+    require => Exec['configure nodejs'];
+  'make install nodejs':
+    command => '/usr/bin/make install -C /tmp/node-v0.8.15',
+    require => Exec['make nodejs']
 }
