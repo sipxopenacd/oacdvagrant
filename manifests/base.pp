@@ -95,7 +95,8 @@ exec {
   'get nodejs source code':
     command => '/usr/bin/wget http://nodejs.org/dist/v0.8.15/node-v0.8.15.tar.gz -O /tmp/node-v0.8.15.tar.gz';
   'untar nodejs':
-    command => '/bin/tar -zxf /tmp/node-v0.8.15.tar.gz -C /tmp';
+    command => '/bin/tar -zxf /tmp/node-v0.8.15.tar.gz -C /tmp',
+    require => Exec['get nodejs source code'];
   'configure nodejs':
     command => "/bin/sh -c './configure'",
     cwd => "/tmp/node-v0.8.15",
