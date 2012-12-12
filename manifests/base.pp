@@ -93,18 +93,23 @@ file { '/etc/hosts':
 
 exec {
   'get nodejs source code':
-    command => '/usr/bin/wget http://nodejs.org/dist/v0.8.15/node-v0.8.15.tar.gz -O /tmp/node-v0.8.15.tar.gz';
+    command => '/usr/bin/wget http://nodejs.org/dist/v0.8.15/node-v0.8.15.tar.gz -O /tmp/node-v0.8.15.tar.gz',
+    unless => '/bin/ls /usr/local/bin/node';
   'untar nodejs':
     command => '/bin/tar -zxf /tmp/node-v0.8.15.tar.gz -C /tmp',
+    unless => '/bin/ls /usr/local/bin/node',
     require => Exec['get nodejs source code'];
   'configure nodejs':
     command => "/bin/sh -c './configure'",
     cwd => "/tmp/node-v0.8.15",
+    unless => '/bin/ls /usr/local/bin/node',
     require => Exec['untar nodejs'];
   'make nodejs':
     command => '/usr/bin/make -C /tmp/node-v0.8.15',
+    unless => '/bin/ls /usr/local/bin/node',
     require => Exec['configure nodejs'];
   'make install nodejs':
     command => '/usr/bin/make install -C /tmp/node-v0.8.15',
+    unless => '/bin/ls /usr/local/bin/node',
     require => Exec['make nodejs']
 }
