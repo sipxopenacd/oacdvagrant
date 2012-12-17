@@ -1,0 +1,8 @@
+#!/bin/bash -x
+
+rm -Rf /tmp/erlang-history
+git clone https://github.com/ferd/erlang-history.git /tmp/erlang-history
+
+cd /tmp/erlang-history
+sed -i 's/sudo //g' Makefile
+make install
