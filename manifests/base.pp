@@ -59,6 +59,11 @@ package {'rest-client': ensure => installed, provider => 'gem'}
 
 package {'genghisapp': ensure => installed, provider => 'gem'}
 
+exec {'/home/vagrant/bin/installerlanghistory':
+  creates => '/usr/lib/erlang/lib/kernel-2.15.2/ebin/group.beam.backup-pre-shell-history',
+  path => '/bin:/usr/bin'
+}
+
 # Home
 
 file { '/home/vagrant/.bashrc':
