@@ -17,8 +17,6 @@ echo "Resetting the set-up"
 # Network settings:
 # IP address   : 10.0.2.15
 # Would you like to configure your system's  network settings? [ enter 'y' or 'n' ] : n
-# Enter just the host name of this computer?. Example: myhost. [ press enter for 'oacddev' ] : oacddev
-# Enter just the domain name of your network? Example: mydomain.com [ press enter for 'ezuce.com' ] : ezuce.com
 # Is this the first server in your cluster? [ enter 'y' or 'n' ] : y
 # Configuring as the first server...
 # Tip: Use 'oacddev.ezuce.com' as your SIP domain if you are
@@ -27,8 +25,14 @@ echo "Resetting the set-up"
 # later.
 # Enter SIP domain name [ press enter for 'ezuce.com' ] : oacddev.ezuce.com
 # Enter SIP realm [ press enter for 'oacddev.ezuce.com' ] : oacddev.ezuce.com
+# Enter just the host name of this computer?. Example: myhost. [ press enter for 'oacddev' ] : oacddev
+# Enter just the domain name of your network? Example: mydomain.com [ press enter for 'ezuce.com' ] : ezuce.com
+# Application settings:
+# Primary server : yes
+# SIP Domain     : oacddev.ezuce.com
+# Host           : oacddev
+# Would you like to change your application settings? [ enter 'y' or 'n' ] : n
 # Initial setup, this may take a few minutes...
-
 # Finishing system configuration, almost done...
 # done.
 
@@ -40,12 +44,12 @@ echo "Resetting the set-up"
 
 echo "y
 n
-oacddev
-ezuce.com
 y
 oacddev.ezuce.com
 oacddev.ezuce.com
-" | sudo ~/install/bin/sipxecs-setup --reset-all
+oacddev
+ezuce.com
+n" | sudo ~/install/bin/sipxecs-setup --reset-all
 
 echo
 
