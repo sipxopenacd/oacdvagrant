@@ -1,10 +1,18 @@
---- 01-openuc.mk	2012-10-23 03:11:01.268575172 -0700
-+++ 01-openuc.mk.1	2012-10-23 03:11:33.245479222 -0700
-@@ -25,7 +25,6 @@
+--- 01-openuc.mk	2013-03-01 20:18:06.626110914 -0800
++++ 01-openuc.mk.2	2013-03-01 20:19:08.991999151 -0800
+@@ -6,14 +6,7 @@
+ 
+ # sipX add ons
  addons = \
- 	openuc \
- 	openuc-ivr-gridfs \
+-	openuc \
+-	openuc-ivr-gridfs \
 -	sipXsbc \
- 	sipXsss \
- 	openuc-ivr-s3 \
- 	openuc-openfire \
+-	sipXsss \
+-	openuc-ivr-s3 \
+-	openuc-openfire \
+-	microsite \
+-	sipXtest
++	openuc
+ 
+ sipx += $(addons)
+ 
