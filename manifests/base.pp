@@ -7,9 +7,9 @@ service { 'iptables': ensure => 'stopped', hasstatus => true, }
 
 # sipXecs
 
-yumrepo { 'sipXecs-testing':
-  name => 'sipXecs-testing',
-  baseurl => 'http://download.sipfoundry.org/pub/sipXecs/snapshot/Fedora_$releasever/$basearch',
+yumrepo { 'sipXecs-stable':
+  name => 'sipXecs-stable',
+  baseurl => 'http://download.sipfoundry.org/pub/release-4.6.0-stable/4.6.0/Fedora_$releasever/$basearch',
   gpgcheck => 0,
 }
 
@@ -33,7 +33,7 @@ $sipx_build_deps = ['apr-devel', 'automake', 'boost-devel', 'cppunit-devel',
 
 # missing build deps: irb, java, java-fonts
 
-package { $sipx_build_deps: ensure => "installed", require => Yumrepo['sipXecs-testing'] }
+package { $sipx_build_deps: ensure => "installed", require => Yumrepo['sipXecs-stable'] }
 
 # rpm build
 package {'rpm-build': ensure => installed,}
