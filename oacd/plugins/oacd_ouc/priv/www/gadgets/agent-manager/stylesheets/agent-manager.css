@@ -1,0 +1,795 @@
+
+#agent-manager-gadget {
+  visibility: visible !important;
+}
+
+
+.styled.last-hour,
+.styled.last-hour select
+{
+    width: 232px !important;
+    height: 25px;
+}
+.styled.last-hour select
+{
+  margin-top:0px;
+}
+tr.agent-row
+{
+    height: 62px !important;
+    overflow: hidden;
+}
+
+
+.bg-red
+{
+    background-color: red !important;
+}
+
+
+#agents-table .mic-button,
+#agents-table .speaker-button
+{
+  width: 36px;
+  height: 36px;
+  background-size: contain;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+#agents-table .mic-button i
+{
+  line-height: 22px;
+  text-indent: 0;
+  position: relative;
+  left: -8px;
+}
+
+div.mic-button-icon,
+div.speaker-button-icon
+{
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+}
+
+div.mic-button-icon
+{
+  background-image: url('../images/agent_manager/monitoring.png');
+
+}
+
+div.speaker-button-icon
+{
+  background-image: url('../images/agent_manager/barging2.png');
+  position: relative;
+  top:-3px;
+  left:-5px;
+
+}
+
+
+ /*custom-selects*/
+
+#agent-manager-gadget #filter .filters.clearfix
+{
+  margin-bottom: 4px;
+}
+#agent-manager-gadget #filter .filters.clearfix span,
+#agent-manager-gadget #filter div.not-yet-implemented span
+{
+  font-size: 10px !important;
+  color:#666 !important;
+}
+/*override bootstrap's select bg in FF*/
+#agent-manager-gadget select option
+{
+  background: none repeat scroll 0 0 #fff;
+  border:0px;
+}
+
+
+#agent-manager-gadget .styled.active select {
+  color: #000;
+background-color: #FFEDA4;
+ background: transparent;
+ width: 174px;
+ padding: 5px;
+ font-size: 12px;
+ border: 1px solid #ccc;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+ height: 25px;
+ -webkit-appearance: none;
+ line-height: 11px;
+
+ /* fix the text cropping issue in FF*/
+padding-bottom: 2px;
+}
+
+#agent-manager-gadget .styled.active {
+  width: 174px;
+ height: 25px;
+ overflow: hidden;
+ background: url('../images/7x4_triangle_down.png') no-repeat 96% #FFEDA4;
+}
+
+#agent-manager-gadget .styled select {
+  width: 174px;
+  color: #808080;
+  background: #fff;
+ background: transparent;
+ padding: 5px;
+ font-size: 12px;
+ border: 1px solid #ccc;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+ height: 25px;
+ -webkit-appearance: none;
+ line-height: 11px;
+
+/* fix the text cropping issue in FF*/
+padding-bottom: 2px;
+
+}
+
+#agent-manager-gadget .styled{
+width: 174px;
+ height: 25px;
+ overflow: hidden;
+ margin: 0;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+ background: url('../images/7x4_triangle_down.png') no-repeat 96% #fff;
+
+}
+
+/** agents-table custom selects **/
+
+ /*custom-selects*/
+
+/*override bootstrap's select bg in FF*/
+#agent-manager-gadget #agents-table select option
+{
+  background: none repeat scroll 0 0 #fff;
+  border:0px;
+}
+
+
+#agent-manager-gadget #agents-table .styled.active select {
+  color: #000;
+background-color: #FFEDA4;
+ background: transparent;
+ width: 100px;
+ padding: 5px;
+ font-size: 12px;
+ border: 1px solid #ccc;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+ height: 25px;
+ -webkit-appearance: none;
+ line-height: 11px;
+}
+
+#agent-manager-gadget #agents-table .styled.active {
+  width: 100px;
+ height: 25px;
+ overflow: hidden;
+ background: url('../images/7x4_triangle_down.png') no-repeat 96% #FFEDA4;
+}
+
+#agent-manager-gadget #agents-table .styled select {
+  width: 100px;
+  color: #808080;
+  background: #fff;
+ background: transparent;
+ padding: 5px;
+ font-size: 12px;
+ border: 1px solid #ccc;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+ height: 25px;
+ -webkit-appearance: none;
+ line-height: 11px;
+}
+
+#agent-manager-gadget  #agents-table .styled{
+width: 100px;
+ height: 25px;
+ overflow: hidden;
+ margin: 0;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+ background: url('../images/7x4_triangle_down.png') no-repeat 96% #fff;
+}
+
+/** agent manager gadget dropdown skills */
+
+#agent-manager-gadget #agents-table select option
+{
+  background: none repeat scroll 0 0 #fff;
+  border:0px;
+}
+
+
+#agent-manager-gadget #agents-table .styled.skills.active select {
+  color: #000;
+background-color: #FFEDA4;
+ background: transparent;
+ width: 120px;
+ padding: 5px;
+ font-size: 12px;
+ border: 1px solid #ccc;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+ height: 25px;
+ -webkit-appearance: none;
+ line-height: 11px;
+}
+
+#agent-manager-gadget #agents-table .styled.active.skills {
+  width: 120px;
+ height: 25px;
+ overflow: hidden;
+ background: url('../images/7x4_triangle_down.png') no-repeat 96% #FFEDA4;
+}
+
+#agent-manager-gadget #agents-table .styled.skills select {
+  width: 120px;
+  color: #808080;
+  background: #fff;
+ background: transparent;
+ padding: 5px;
+ font-size: 12px;
+ border: 1px solid #ccc;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+ height: 25px;
+ -webkit-appearance: none;
+ line-height: 11px;
+}
+
+#agent-manager-gadget  #agents-table .styled.skills{
+width: 120px;
+ height: 25px;
+ overflow: hidden;
+ margin: 0;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+ background: url('../images/7x4_triangle_down.png') no-repeat 96% #fff;
+}
+
+#agents-table i.icon-caret-right, #agents-table i.icon-caret-down
+{
+  cursor: hand;
+  cursor: pointer;
+}
+
+
+#agents-table
+{
+  font-size: 8pt;
+  width: 615px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-top-width: 0px !important;
+}
+
+#agents-table thead > tr.agent-heading
+{
+  background: #E6E6E6;
+  font-size: 9pt;
+  border-bottom:0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-color: #E6E6E6 !important;
+}
+#agents-table .agent-contact
+{
+  margin-top: 10px;
+}
+#agents-table-container
+{
+  margin-left:30px;
+}
+#filter > input#agent-search
+{
+  max-width: 170px;
+  margin-bottom: 30px !important;
+  margin-top: 22px !important;
+  font-size:12px;
+  height: 25px;
+  text-indent: 4px;
+}
+#filter #agent-search
+{
+  display: block;
+  max-width: 260px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 37px;
+  margin-top: 15px;
+  color: #979594;
+}
+#agents-table, #agents-table td
+{
+  border:2px solid #fff;
+}
+
+#agents-table .agent-name,
+#agents-table .agent-job-title
+{
+  font-size: 9pt;
+  color: #3C62A7;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+#agents-table .agent-name
+{
+  font-weight: bold;
+}
+
+#agents-table td.agent-details
+{
+  vertical-align: top;
+}
+
+#agents-table .agent-details:first-line
+{
+  color: #3C5A78;
+}
+
+#agents-table thead, #agents-table thead > tr
+{
+  text-align: center;
+  border-bottom:0px;
+  display: block;
+}
+
+#agents-table tbody
+{
+  max-height:350px;
+  overflow: auto;
+  overflow-x: hidden;
+  border-top: none;
+  display: block;
+}
+
+#agents-table td.value{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  height: 62px !important;
+  vertical-align: top;
+  padding-top: 10px;
+  color: #4E4D4D;
+}
+
+#agents-table td.occup,
+#agents-table td.my-cpt,
+#agents-table td.calls,
+#agents-table td.time-logged-in,
+#agents-table td.smc
+{
+  overflow: hidden;
+  line-height: 10pt;
+  padding-bottom: 0px !important;
+  text-indent: 2px !important;
+}
+#agents-table td.occup,
+#agents-table td.my-cpt,
+#agents-table td.calls
+{
+  width: 50px;
+}
+#agents-table td.time-logged-in
+{
+  width: 84px;
+  text-indent: 0px !important;
+}
+#agents-table td.smc
+{
+  width: 130px;
+}
+
+
+#agents-table div.occup,
+#agents-table div.my-cpt,
+#agents-table div.calls,
+#agents-table div.time-logged-in,
+#agents-table div.smc
+{
+  height: 50px !important;
+  display: block;
+  padding-bottom: 0 !important;
+}
+
+table#agents-table > td > table
+{
+  border: 0px;
+  border-collapse: collapse;
+}
+
+table#agents-table > thead > tr#agents-arrows,
+table#agents-table > thead > tr#agents-arrows > td
+{
+  height: 20px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  position: relative;
+  top:-2px;
+  margin:0px !important;
+  border-collapse: collapse;
+
+}
+
+
+#agents-table tr#agents-arrows
+{
+  background: #fff;
+}
+
+#agents-arrows
+{
+  text-align: center;
+  vertical-align: top;
+  border-collapse: collapse;
+  border:none;
+}
+table#agents-table > thead > tr#agents-arrows .icon-caret-down
+{
+  color:#E6E6E6;
+  font-size: 20px !important;
+  text-align: center;
+  position: relative !important;
+  top:-6px !important;
+  margin: auto;
+  z-index: 200;
+  text-indent: 0;
+  margin-top: 0px;
+  z-index:400;
+}
+
+table#agents-table > thead > tr#agents-arrows  td.occup .icon-caret-down,
+table#agents-table > thead > tr#agents-arrows  td.my-cpt .icon-caret-down,
+table#agents-table > thead > tr#agents-arrows  td.time-logged-in .icon-caret-down,
+table#agents-table > thead > tr#agents-arrows  td.smc .icon-caret-down,
+table#agents-table > thead > tr#agents-arrows  td.calls .icon-caret-down
+{
+  top:-4px !important;
+
+}
+
+@-moz-document url-prefix() {
+  table#agents-table > thead > tr#agents-arrows .icon-caret-down,
+  table#agents-table > thead > tr#agents-arrows  td.occup .icon-caret-down,
+  table#agents-table > thead > tr#agents-arrows  td.my-cpt .icon-caret-down,
+  table#agents-table > thead > tr#agents-arrows  td.time-logged-in .icon-caret-down,
+  table#agents-table > thead > tr#agents-arrows  td.smc .icon-caret-down,
+  table#agents-table > thead > tr#agents-arrows  td.calls .icon-caret-down
+  { top: -5px !important;
+   }
+}
+
+
+
+
+#agents-arrows .icon-caret-down .left-justified
+{
+  text-align: left;
+  left: -50px;
+
+}
+table#agents-table > thead > tr#agents-arrows i.icon-caret-down.active
+{
+  color: #505050;
+}
+
+#agent-manager-gadget h5
+{
+  font-size:12px;
+  display:block;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #E6E6E6;
+  font-weight: normal;
+  text-align: left;
+  line-height: 13pt;
+  color: #505050;
+  margin-bottom: 0!important;
+  margin-top: 0 !important;
+  text-indent: 4px;
+}
+
+#agent-manager-client-logo {
+  height: 31px;
+  width: 31px;
+  display: block;
+  background: url('../images/dummy_media_solutions_logo.png') 0 0 no-repeat;
+  background-size: contain;
+}
+
+#agents-table td.client-logo
+{
+  height: 31px !important;
+  width: 31px !important;
+  display: block;
+  padding: 0 !important;
+  border:none;
+}
+#agents-table tr.client-logo
+{
+  height: 31px !important;
+  padding: 0;
+  margin:0;
+  display: table-row;
+}
+
+#agents-table .client-logo-container {
+  background: url('../images/default_client.png') 0 0 no-repeat;
+  background-size : contain;
+  width: 31px;
+  height: 31px;
+  display: table-cell;
+  vertical-align: bottom;
+
+}
+
+#agents-table .client-logo-container img {
+  width: 31px;
+  height: 31px;
+  display: none;
+}
+
+#agents-table div.row-fluid.indented
+{
+  padding-left: 6px;
+}
+
+#agents-table .agents-activity-icon
+{
+  height:20px;
+  width: 20px;
+  display: block;
+  padding-bottom: 4px;
+}
+#agents-table .agents-activity-icon.session-call {
+  background: url('../images/icons/png45/phone_off.png');
+  background-repeat:no-repeat;
+  background-size: contain;
+}
+#agents-table .agents-activity-icon.session-voicemail {
+  background: url('../images/icons/png45/voicemail_off.png');
+  background-repeat:no-repeat;
+  background-size: contain;
+}
+#agents-table .agents-activity-icon.session-email {
+  background: url('../images/icons/png45/email_off.png');
+  background-repeat:no-repeat;
+  background-size: contain;
+}
+
+#agents-table button.profile-chat
+{
+  height: 36px;
+  width: 36px;
+  margin-right: 5px;
+  float:left;
+}
+
+
+.agents-table-activity-icon.session-call {
+  background: url('../images/icons/png45/phone_off.png');
+  background-repeat:no-repeat;
+  background-size: contain;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  left: -5px;
+}
+/* FF hack */
+@-moz-document url-prefix() {
+  .agents-table-activity-icon.session-call
+  { left: 0px; }
+}
+
+@-moz-document url-prefix() {
+  button.profile-chat i.icon-comment
+  { left: 0px; }
+}
+
+
+#agents-table button.profile-chat > i.icon-comment
+{
+  font-size:28px;
+  position: relative;
+  left: -11px;
+}
+
+
+#agents-table td.value.call-status,
+#agents-table td.value > .agent-manager-agents-icon
+{
+  width: 31px !important;
+  height: 31px !important;
+  padding: 0;
+  padding-top: 2px;
+  border-bottom: 2px solid white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+#agents-table td.call-reason
+{
+  width: 115px;
+}
+
+#agents-table td.value > .agent-manager-agents-icon.released {
+  background-image: url('../images/agent_state/31x32_released.png');
+
+}
+#agents-table td.value > .agent-manager-agents-icon.idle {
+  background-image: url('../images/agent_state/31x32_idle.png');
+}
+#agents-table td.value > .agent-manager-agents-icon.precall {
+  background-image: url('../images/agent_state/31x32_precall.png');
+}
+#agents-table td.value > .agent-manager-agents-icon.incoming {
+  background-image: url('../images/agent_state/31x32_incoming.png');
+}
+#agents-table td.value > .agent-manager-agents-icon.in_session {
+  background-image: url('../images/agent_state/31x32_session.png');
+}
+#agents-table td.value > .agent-manager-agents-icon.wrap_up {
+  background-image: url('../images/agent_state/31x32_wrap.png');
+}
+
+td#smc,
+div#smc
+{
+  width: 147px !important;
+}
+div#smc
+{
+  display: block;
+}
+
+#agents-table thead div#time-logged-in
+{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#agents-table .status-menu a.dropdown-toggle,
+#agents-table .skills-menu a.dropdown-toggle
+{
+  background-color: #fff;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 5px;
+  text-transform: capitalize;
+}
+
+#agents-table .status-menu a.dropdown-toggle
+{
+  min-width: 100px;
+  margin-right: 7px;
+}
+#agents-table .skills-menu a.dropdown-toggle
+{
+  min-width: 130px;
+}
+
+#agents-table div.permanent-checkbox
+{
+  margin-left: 5px;
+  margin-top: 10px;
+}
+#agents-table div.permanent-checkbox label
+{
+  font-size: 12px;
+  width: 180px;
+}
+table#agents-table tr.agent-heading
+{
+  height: 27px !important;
+  vertical-align: text-top;
+  text-indent: 3px;
+}
+
+table#agents-table div#agent-th,
+table#agents-table td.agent-th
+{
+  width: 200px;
+  text-align: left !important;
+  border-collapse: collapse;
+}
+div#agent-th
+{
+  display: block;
+}
+table#agents-table tbody div.span9.tight,
+table#agents-table tbody div.span1.tight,
+table#agents-table tbody div.span2.tight
+{
+  vertical-align: top;
+  max-height: 63px;
+}
+table#agents-table tbody div.span9.tight
+{
+  width: 163px;
+}
+table#agents-table tbody div.span1.tight
+{
+  padding-right: 4px;
+}
+table#agents-table tbody div.span9.tight
+{
+  padding-left: 10px;
+  padding-top: 3px;
+}
+
+td.agent-details
+{
+  max-width: 200px !important;
+  overflow: hidden;
+  height: 63px !important;
+}
+
+td.agent-details i.icon-caret-down
+{
+  position: relative !important;
+  top:2px !important;
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 2px;
+}
+td.agent-details i.icon-caret-right
+{
+  position: relative !important;
+  top:3px !important;
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 2px;
+  left:3px;
+}
+td.agent-details div.profile-pic-frame
+
+{
+  position: relative !important;
+  top:5px !important;
+  margin-left: 3px;
+}
+#agents-table p.block
+{
+  width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: hidden;
+  text-overflow: ellipsis !important;
+  -o-text-overflow: ellipsis !important;
+  -ms-text-overflow: ellipsis!important;
+  margin: 0;
+  max-height: 14px;
+}
+
+
+
+#agents-table .ellipsis
+{
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ -o-text-overflow: ellipsis;
+ -ms-text-overflow: ellipsis;
+}
+
