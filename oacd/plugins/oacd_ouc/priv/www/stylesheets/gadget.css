@@ -26,15 +26,6 @@ td, th, tr
 }
 
 
-
-
-
-
-.outbound-text-dialer input
-{
-  font-size: 32px;
-}
-
 /* ICONS */
 .ico-phone, .ico-email, .ico-chat
 {
@@ -203,24 +194,6 @@ table .table
 }
 
 
-/* END AGENT MANAGER */
-
-
-.session-button
-{
-  display: block;
-  float: left;
-  width: 66px;
-  height:66px;
-  font-size: 36px;
-  line-height: 36px;
-  text-align: center;
-  margin-right: 2px;
-  padding-left: 6px;
-  padding-bottom: 0;
-}
-
-
 
 
 
@@ -319,43 +292,7 @@ label[for=username],label[for=password]
   margin-bottom:4px;
 }
 
-/* CHAT GADGET OVERRIDE */
-#chat-container {
- margin-left:10px;
- margin-top:10px;
-
-}
-#chat-container ul
-{
-  list-style-type: none;
-  text-align: left;
-}
-
-#chat-container ul li a
-{
-
-  background: transparent url(/assets/images/chat/list-off.gif) left center no-repeat;
-  padding-left: 15px;
-  text-align: left;
-  font: normal 11px "Lucida Grande", "Lucida Sans Unicode", verdana, lucida, sans-serif;
-  text-decoration: none;
-  color: #999;
-}
-
-#chat-container ul li a:hover
-{
-  background: transparent url(/assets/images/chat/list-on.gif) left center no-repeat;
-  color: black;
-}
-
-#chat-container ul li a#current
-{
-  background: transparent url(/assets/images/chat/list-active.gif) left center no-repeat;
-  color: #666;
-}
-
-/** END OVERRIDE */
-
+/
 
   a:link, a:active, a:visited {
     color: #147EBE;
