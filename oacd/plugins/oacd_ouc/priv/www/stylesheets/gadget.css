@@ -307,7 +307,7 @@ div.progress-orange.progress.last
   font-size: 32px;
 }
 
-/* AGENT MANAGER */
+/* ICONS */
 .ico-phone, .ico-email, .ico-chat
 {
   display: block;
@@ -1662,14 +1662,7 @@ div.session-button-inner > i.icon-stop
   padding-left: 9px;
 }
 
-.profile-chat {
-  display: block;
-  width: 36px;
-  height: 23px;
-  float: right;
-  line-height: 12px;
-  font-size: 18px;
-}
+
 
 .profile-pic-frame {
   background: url('../images/agent_state/avatar-frame_27x30.png') left top no-repeat;
@@ -1905,9 +1898,6 @@ div.info-label-text
     width: 100%;
   }
 
-
-
-
   /* add blue background for boxes that are being edited */
   .editbox {
     background: #DBEFFA;
@@ -1995,319 +1985,6 @@ div.info-label-text
   {
     font-size:13px;
   }
-
-
-  #agent-profile-header-row td
-  {
-    color: #979594;
-    font-size: 10px;
-    font-weight: normal;
-    height: 12px;
-    line-height: 8px;
-  }
-
-  #agent-profile-table
-  {
-    width: 820px;
-  }
-
-
-  #agent-profile-table td
-  {
-    border-spacing: 2px;
-    border:3px solid white;
-    min-width: 37px;
-  }
-
-  #agent-profile-table h4
-  {
-    font-size:14px;
-  }
-
-  #agent-profile-table tr td.skills
-  {
-    border-bottom:1px solid #BFBFBF;
-    border-top:1px solid #BFBFBF;
-  }
-
-  #agent-profile-table tr.data-row td.skills:last-child
-  {
-   border-bottom:1px solid #fff !important;
-   color:red !important;
- }
-
- #agent-profile-table .skills span
- {
-  font-weight: bold;
-  font-size: 13px;
-  display: block;
-  text-align: left;
-  color:#505050;
-}
-
-#agent-profile-table .skills p
-{
-  font-weight: normal;
-  font-size: 11px;
-  text-align: left;
-  color: #979594;
-  margin-bottom: 0 !important;
-}
-
-#agent-profile-table .last-hour-col
-{
-  border-left:4px solid white;
-  margin-left: 4px;
-}
-
-
-#agent-profile-table tbody
-{
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-}
-
-#agent-profile-table td, th, tr
-{
-  padding-right: 0px !important;
-  padding-left: 0px !important;
-  empty-cells: show;
-  min-width: 0px;
-}
-
-#agent-profile-table th#profile-column
-{
-  width: 175px;
-  padding-left: 0;
-  padding-right: 0;
-}
-#agent-profile-table div#profile-column
-{
-  width: 175px;
-  display: block;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  background-color: #E6E6E6;
-  font-weight: normal;
-  text-align: left;
-  line-height: 13pt;
-  color: #505050;
-  margin-bottom: 0!important;
-  margin-top: 0 !important;
-  text-indent: 4px;
-}
-
-/* to make the space between the thead and tbody the same */
-#agent-profile-table th#agent-states-column,
-#agent-profile-table th#profile-column
-{
-  padding-bottom: 13px !important;
-}
-#agent-profile-table th#last-hour-column
-{
-  padding-bottom: 15px !important;
-}
-
-#agent-profile-table th#agent-states-column
-{
-  width:373px !important;
-  padding-left: 0;
-  padding-right: 0;
-}
-div#agent-states-column
-{
-  width:373px !important;
-  display:block;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  background-color: #E6E6E6;
-  font-weight: normal;
-  text-align: left;
-  line-height: 13pt;
-  color: #505050;
-  margin-bottom: 0!important;
-  margin-top: 0 !important;
-  text-indent: 4px;
-}
-
-#agent-profile-table th#last-hour-column
-{
-  width: 232px;
-  padding-left: 0;
-  padding-right: 0;
-}
-#agent-profile-table div#last-hour-column
-{
-  width: 232px;
-  display: block;
-  margin:0;
-  padding-top:0px;
-  padding-left: 2px;
-  padding-bottom: 0px !important;
-}
-#agent-profile-table td, th, tr
-{
-  padding-right: 0px !important;
-  padding-left: 0px !important;
-  empty-cells: show;
-  min-width: 0px;
-}
-
-#agent-profile-table th#profile-column
-{
-  width: 175px;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0 !important;
-}
-#agent-profile-table div#profile-column
-{
-  width: 175px;
-  display: block;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  background-color: #E6E6E6;
-  font-weight: normal;
-  text-align: left;
-  line-height: 13pt;
-  color: #505050;
-  margin-bottom: 0!important;
-  margin-top: 0 !important;
-  text-indent: 4px;
-}
-
-#agent-profile-table th#agent-states-column
-{
-  width:373px !important;
-  padding-left: 0;
-  padding-right: 0;
-}
-div#agent-states-column
-{
-  width:373px !important;
-  display:block;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  background-color: #E6E6E6;
-  font-weight: normal;
-  text-align: left;
-  line-height: 13pt;
-  color: #505050;
-  margin-bottom: 0!important;
-  margin-top: 0 !important;
-  text-indent: 4px;
-}
-
-#agent-profile-table th#last-hour-column
-{
-  width: 232px;
-  padding-left: 0;
-  padding-right: 0;
-}
-#agent-profile-table div#last-hour-column
-{
-  width: 232px;
-  display: block;
-  margin:0;
-  padding-top:2px;
-  padding-left: 2px;
-}
-
-#agent-profile-table th.empty-cell, td.empty-cell
-#agent-profile-table th.empty-cell.small, td.empty-cell.small
-{
-  min-width: 0;
-  margin:0;
-  padding:0;
-  border:0;
-  border-spacing: none;
-  border-collapse: collapse;
-}
-#agent-profile-table th.empty-cell-small, td.empty-cell.small
-{
-  width:10px;
-}
-#agent-profile-table th.empty-cell, td.empty-cell
-{
-  width: 30px;
-}
-#agent-profile-table th.empty-cell.smallest,
-#agent-profile-table td.empty-cell.smallest,
-#agent-profile-table div.empty-cell.smallest
-{
-  width:2px !important;
-}
-
-#agent-profile-table td.total-agents,
-#agent-profile-table td.released,
-#agent-profile-table td.idle,
-#agent-profile-table td.in-session,
-#agent-profile-table td.wrap-up,
-#agent-profile-table td.ringing
-{
-  width: 60px;
-}
-#agent-profile-table td.occup,
-#agent-profile-table td.cpt,
-#agent-profile-table td.calls
-{
-  width: 76px;
-}
-
-#agent-profile-table th.empty-cell,
-#agent-profile-table td.empty-cell
-{
-  min-width: 0;
-  margin:0;
-  padding:0;
-  border:0;
-  border-spacing: none;
-  border-collapse: collapse;
-  display: block;
-}
-
-#agent-profile-table th.empty-cell,
-#agent-profile-table td.empty-cell,
-#agent-profile-table div.empty-cell
-
-{
-  width: 29px !important;
-}
-
-#agent-profile-table th.empty-cell-small,
-#agent-profile-table td.empty-cell.small,
-#agent-profile-table div.empty-cell.small
-{
-  width:5px !important;
-}
-#agent-profile-table th.empty-cell.smallest,
-#agent-profile-table td.empty-cell.smallest,
-#agent-profile-table div.empty-cell.smallest
-{
-  width:2px !important;
-}
-
-#agent-profile-table td.total-agents,
-#agent-profile-table td.released,
-#agent-profile-table td.idle,
-#agent-profile-table td.in-session,
-#agent-profile-table td.wrap-up,
-#agent-profile-table td.ringing
-{
-  width: 60px;
-}
-#agent-profile-table td.occup,
-#agent-profile-table td.cpt,
-#agent-profile-table td.calls
-{
-  width: 76px;
-  max-height: 30px;
-}
-#agent-profile-table td.total-agents
-{
-  border-right: 5px solid white;
-}
 
 
 
@@ -2744,9 +2421,6 @@ border:5px solid red;*/
 }
 
 /** nav-tabs override **/
-
-
-
 [class*="span"] {
   float: left;
   min-height: 1px;
