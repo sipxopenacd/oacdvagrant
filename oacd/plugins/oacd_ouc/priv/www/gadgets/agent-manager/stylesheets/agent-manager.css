@@ -1150,3 +1150,74 @@ div#outbound-call-gadget
   line-height: 12px;
   font-size: 18px;
 }
+
+
+/*PROFILE PIC*/
+
+.profile-pic-frame {
+  background: url('../images/agent_state/avatar-frame_27x30.png') left top no-repeat;
+  height: 30px;
+  width: 27px;
+  margin-right: 5px;
+  margin-left:4px;
+}
+
+.profile-pic-frame.indented
+{
+  margin-left:12px;
+}
+
+#profile-view
+{
+  max-width: 150px;
+}
+
+
+#profile-view.indented
+{
+  margin-left: 5px;
+}
+
+
+
+.profile-pic {
+  background: url('../images/default_agent.png') center center no-repeat;
+  width: 27px;
+  height: 26px;
+  vertical-align: top;
+  visibility: hidden;
+  margin-left: 0px;
+}
+
+.profile-pic img{
+  width: 25px;
+  height: 24px;
+  margin: 1px 1px 0;
+}
+
+.profile-pic-status {
+  width: 25px;
+  height: 3px;
+  padding: 1px;
+  float: left;
+}
+
+.profile-icon {
+  display: block;
+  width: 54px;
+  height: 35px;
+  float: right;
+  margin-top:11px;
+  cursor: hand !important;
+  cursor: pointer;
+
+}
+.profile-icon.off {
+  background: url('../images/agent_state/icon_profile_off.png') right top no-repeat;
+}
+.profile-icon.on {
+  background: url('../images/agent_state/icon_profile_on.png') right top no-repeat;
+}
+
+}
+

@@ -25,100 +25,6 @@ td, th, tr
   min-height: 0px;
 }
 
-/* OUTBOUND CALL */
-#outbound-call-gadget .num-dial-button
-{
-  width: 67px;
-  height: 34px;
-}
-
-#outbound-call-gadget .dialer-side
-{
-  width: 70px;
-  height: 75px;
-  background-size: cover;
-}
-
-
-#outbound-call-gadget #dialpad button
-{
-  background: #f4f3f3; /* Old browsers */
-  background: -moz-linear-gradient(top,  #f4f3f3 0%, #fbfafa 19%, #fbfafa 44%, #f8f7f7 63%, #f2f2f2 77%, #f2f2f2 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f3f3), color-stop(19%,#fbfafa), color-stop(44%,#fbfafa), color-stop(63%,#f8f7f7), color-stop(77%,#f2f2f2), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #f4f3f3 0%,#fbfafa 19%,#fbfafa 44%,#f8f7f7 63%,#f2f2f2 77%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #f4f3f3 0%,#fbfafa 19%,#fbfafa 44%,#f8f7f7 63%,#f2f2f2 77%,#f2f2f2 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #f4f3f3 0%,#fbfafa 19%,#fbfafa 44%,#f8f7f7 63%,#f2f2f2 77%,#f2f2f2 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #f4f3f3 0%,#fbfafa 19%,#fbfafa 44%,#f8f7f7 63%,#f2f2f2 77%,#f2f2f2 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f3', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
-
-}
-
-#outbound-call-gadget #dialpad
-{
-  width: 100%;
-}
-
-
-#outbound-call-gadget #call-button{
-  width: 51px;
-  height: 53px;
-  display: block;
-  background: url('../images/outbound_call/dial_button.png') 0 0 no-repeat;
-  cursor: pointer;
-  background-size: cover;
-}
-#outbound-call-gadget #call-text-input
-{
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 40px;
-  height: 45px;
-  color: #333;
-  padding-left: 10px;
-}
-#outbound-text-dialer
-{
-  margin-top: 10px;
-}
-
-#outbound-current-call
-{
-  font-size: 11px;
-  vertical-align: middle;
-}
-.outbound-button
-{
-  display: block;
-  float: left;
-  width: 36px;
-  height:36px;
-  font-size: 28px;
-  line-height: 28px;
-  text-align: center;
-  margin-right: 4px;
-  padding-left: 6px;
-  padding-bottom: 0;
-  margin-top: 4px;
-  margin-left: 2px;
-  vertical-align: middle;
-}
-
-.outbound-button .icon-play
-{
-  text-indent: 4px;
-}
-
-.outbound-button .icon-stop
-{
-  text-indent: 0px;
-}
-
-.outbound-button .icon-stop .off
-{
-  color: #A8A6A5 !important;
-}
-
-/* END OUTBOUND CALL */
 
 /* MY STATISTICS */
 #my-statistics {
@@ -672,18 +578,7 @@ table .table
 {
   margin-left: 0;
 }
-#session-incoming > div.row-fluid,
-#session-incoming > div > div,
-#session-profile > div.row-fluid
-{
-  min-height: 16px !important;
-  /*max-height: 16px !important;*/
-}
 
-#session-profile
-{
-  margin-top: 10px;
-}
 
 
 
@@ -744,45 +639,7 @@ div.gadget
 }
 /* END OVERALL GADGET OVERRIDE STYLES*/
 
-/*AGENT STATE GADGET*/
-.agent-state-gadget{
-}
-.gadget-heading, .gadget h3
-{
-  line-height: 16px;
-}
-.profile-info {
-  font-size: 8.5pt;
-  line-height: 7pt;
-  min-height: 50px;
-}
-.profile-info ul
-{
-  list-style-type: none;
-  margin-left: 0;
-}
 
-#agent-state-gadget button#save-profile-button
-{
-  width: 65px !important;
-}
-
-
-
-
-#editbox-contents
-{
-  padding: 5px;
-  padding-top: 20px;
-
-}
-
-#agent-state-gadget div#profile-edit-address input
-{
-  margin-bottom: 3px;
-}
-
-/* END AGENT STATE */
 
 
 
@@ -857,234 +714,6 @@ label[for=username],label[for=password]
 
 /** END OVERRIDE */
 
-/** AGENT STATE STYLES **/
-.tight{
-  margin: 0;
-  padding-right: 0;
-  padding-top:0;
-}
-
-.very-tight
-{
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-
-.tight-counter{
-  margin: 0;
-  padding-right: 0;
-  width: 56px;
-  height: 66px;
-  background-color: #E1F1FA;
-  font-size: 11px;
-  text-align: center;
-}
-
-.tight-counter p
-{
-  font-size: 16px;
-  font-weight: bold;
-  padding-left: 1px;
-  padding-right: 1px;
-  padding-top: 4px;
-}
-
-.option-title
-{
-  color: #eeeeee;
-
-}
-
-/* removes the border-bottom from the My Profile gadget-row
-#agent-state-gadget div.gadget-row:first-child
-{
-  border-bottom: 1px solid #fff !important;
-  } */
-
-  #agent-state-reason
-  {
-    min-width: 50px;
-  }
-
-  #agent-state-reason a
-  {
-    font-size: 8pt;
-    color: #666;
-  }
-
-  #agent-state-reason .btn .dropdown-toggle a,
-  #agent-state-reason .btn .dropdown-toggle button,
-  #agent-state-reason .btn
-  #agent-state-gadget .btn
-  {
-    padding: 0 !important;
-    margin: 0 !important;
-    margin-bottom: 20px;
-  }
-
-  #agent-state-reason ul.dropdown-menu,
-  #agent-state-reason ul.dropdown-menu li
-  {
-    min-width: 60px !important;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  #agent-state-reason ul.dropdown-menu li a
-  {
-    padding-left: 3px;
-    padding-right: 3px;
-  }
-
-
-  #agent-state-reason ul.dropdown-menu li a:hover
-  {
-    background-color: #E1F2FA;
-    background-image: none;
-    color: #3D90CA;
-  }
-
-  #agent-timer-text
-  {
-    padding-top: 20px;
-    text-indent: 3px;
-  }
-
-  /** agent state chat **/
-
-  .padded-left
-  {
-    padding-left:4px;
-  }
-
-  #chat
-  {
-    color: #505050;
-  }
-
-  .chat-section-title
-  {
-    background-color: #C8E1EE;
-    padding-left: 6px;
-    border-top: 1px solid #F5FAFD;
-    border-bottom: 1px solid #F5FAFD;
-  }
-
-  .chat-section-title .icon-caret-right, .chat-section-title .icon-caret-down
-  {
-    margin-right: 6px;
-  }
-
-  .chat-contact
-  {
-    background-color: #DBEFFA;
-    border-top: 1px solid #F5FAFD;
-    border-bottom: 1px solid #F5FAFD;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .chat-contact-pic
-  {
-    margin-left: 5px;
-  }
-
-  #chat > ul.nav.nav-tabs
-  {
-    margin-bottom: 0px !important;
-  }
-
-  #chat > .nav-tabs > li {
-    margin-bottom: -1px;
-    margin-right: -1px;
-    border-bottom: 1px solid #F5FAFD;
-  }
-
-  .nav-tab-regular
-  {
-    min-width: 72px;
-  }
-
-  #chat > .nav-tabs > li > a {
-    text-overflow:ellipsis;
-    font-size:12px;
-    font-weight:normal;
-    /* padding-top: 8px; */
-    margin-right: 0;
-    padding-bottom: 1px !important;
-    padding-left: 3px !important;
-    padding-right: 2px !important;
-    line-height: 18px;
-    border: 1px solid transparent;
-    color: #555555;
-    cursor: pointer;
-    background-color: #F0F0F0;
-    border: 1px solid #E6E6E6;
-    height: 20px;
-    border-bottom-color: transparent;
-    -webkit-border-top-left-radius: 4px;
-    -webkit-border-top-right-radius: 4px;
-    -moz-border-radius-topleft: 4px;
-    -moz-border-radius-topright: 4px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-  }
-
-  #chat > .nav-tabs > li > a:hover {
-    border-color: #eeeeee #eeeeee #dddddd;
-    background-color: #F5FAFD;
-  }
-
-  #chat > .nav-tabs > .active > a,
-  #chat > .nav-tabs > .active > a:hover {
-    color: #555555;
-    cursor: default;
-    background-color: #DBEFFA;
-    border: 1px solid #E6E6E6;
-
-    border-bottom-color: transparent;
-  }
-
-
-  #chat > div.chat.tab-content
-  {
-    height: 200px;
-    border:1px solid #E6E6E6;
-    overflow: scroll;
-    overflow-x: hidden;
-  }
-
-  .chat-status
-  {
-    display: inline-block;
-    text-indent:8px;
-  }
-
-  /** END agent state chat **/
-
-  /** END AGENT STATE STYLES **/
-
-
-  #ags-chatsession {
-    background-color: #d8e1e6;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    margin:6px;
-  }
-
-  #ags-chatsession input[type="text"], #ags-chatsession  textarea, #ags-chatsession label{
-
-    margin-left:10px;
-    width: 240px;
-
-  }
-  #ags-chatsession  textarea{
-    min-height:80px;
-  }
-  #ags-chatsession input[type="submit"]{
-    margin-left:10px;
-  }
 
   a:link, a:active, a:visited {
     color: #147EBE;
@@ -1171,6 +800,7 @@ input[type=text], input[type=password], input[type=email] {
   border-radius: 4px;
   font-family: Arial, Helvetica, Sans-serif;
   margin-left:4px;
+  color: #333;
 }
 
 .info-set .label, .gadget input[type=text]
@@ -1489,256 +1119,13 @@ button:hover {
 }
 
 
-#chat-state-icons li {
-  display: block;
-  padding-right: 15px;
-}
-#chat-stat {
-  margin-right: 5px;
-}
-#chat-stat.online {
-  background: url('../images/agent_state/bullet_03.png') right center no-repeat;
-}
 
-#profile-state{
-  white-space: nowrap;
-}
-
-ul#profile-state-icons
-{
-  margin-right:0;
-  padding-right: 0;
-  text-align: right;
-  margin-left: 0;
-}
-
-#profile-state-icons li {
-  display: inline-block;
-  padding-right: 15px;
-  text-align: right;
-  text-indent: 4px;
-}
-#profile-stat1 {
-  margin-right: 8px;
-}
-#profile-stat1.released {
-  background: url('../images/agent_state/10x10_released.png') right center no-repeat;
-}
-#profile-stat1.idle {
-  background: url('../images/agent_state/10x10_idle.png') right center no-repeat;
-}
-#profile-stat1.precall {
-  background: url('../images/agent_state/10x10_precall.png') right center no-repeat;
-}
-#profile-stat1.incoming {
-  background: url('../images/agent_state/10x10_incoming.png') right center no-repeat;
-}
-#profile-stat1.in_session {
-  background: url('../images/agent_state/10x10_session.png') right center no-repeat;
-}
-#profile-stat1.wrap_up {
-  background: url('../images/agent_state/10x10_wrap.png') right center no-repeat;
-}
-#profile-stat2.busy {
-  background: url('../images/agent_state/bullet_busy.png') right center no-repeat;
-}
-#profile-stat2.away {
-  background: url('../images/agent_state/bullet_away.png') right center no-repeat;
-}
-#profile-stat2.online {
-  background: url('../images/agent_state/bullet_online.png') right center no-repeat;
-}
-#profile-stat2{
-  margin-right: 2px;
-}
-
-#profile-stat1.wrap-up{
-  background: url('../images/agent_state/10x10_wrap-up.png') right center no-repeat;
-}
-#profile-stat2.wrap-up{
-  background: url('../images/agent_state/10x10_wrap-up.png') right center no-repeat;
-}
-
-
-#agent-state-gadget .profile-name {
-  font-weight: bold;
-  font-size: 12px;
-}
-
-
-#agent-state-gadget #edit-avatar
-{
-  margin-left:50px;
-}
-
-.editable-details .on
-{
-
-}
-
-
-.editable-details off
-{
-
-}
-
-#agent-state-session-button
-{
-  margin-right:0px;
-}
-#agent-state-session-button div.session-button-inner
-{
-  display: table;
-  margin: 0 auto;
-}
-#agent-state-session-button div.session-button-inner i.icon-stop,
-#agent-state-session-button div.session-button-inner i.icon-play
-{
-  padding-top: 5px;
-}
-
-
-#agent-state-session-button div.session-button-inner i.icon-stop,
-div.session-button-inner > i.icon-stop
-{
-  padding-top: 6px;
-  padding-left: 2px;
-}
-@-moz-document url-prefix()
-{ #agent-state-session-button div.session-button-inner i.icon-stop,
-  div.session-button-inner > i.icon-stop
-  {
-    padding-top: 9px;
-    padding-left: 2px;
-  }
-}
-@-moz-document url-prefix()
-{ #agent-state-session-button div.session-button-inner i.icon-play
-  {
-    padding-top: 9px;
-  }
-}
-
-
-#agent-state-session-button div.session-button-outer
-{
-  width: 76px;
-}
-
-
-/*
-#agent-state-session-button .icon-play
-{
-  position: relative !important;
-  left: -10px !important;
-  top: 7px;
-}
-#agent-state-session-button .icon-stop
-{
-  position: relative !important;
-  left: -5px !important;
-  padding-right: -6px;
-  top: 6px;
-}
-
-@-moz-document url-prefix()
-{ #agent-state-session-button .icon-play,
-  button#agent-state-session-button > i.icon-play
-  {
- top: 10px !important;
- left:-10px !important;
-}
-}
-@-moz-document url-prefix()
-{ #agent-state-session-button .icon-stop,
-  button#agent-state-session-button > i.icon-stop
- top: 10px !important;
-  left:-10px !important;
-}
-}
-*/
 .left-margin-padded
 {
   padding-left: 9px;
 }
 
 
-
-.profile-pic-frame {
-  background: url('../images/agent_state/avatar-frame_27x30.png') left top no-repeat;
-  height: 30px;
-  width: 27px;
-  margin-right: 5px;
-  margin-left:4px;
-}
-
-.profile-pic-frame.indented
-{
-  margin-left:12px;
-}
-
-#profile-view
-{
-  max-width: 150px;
-}
-
-
-#profile-view.indented
-{
-  margin-left: 5px;
-}
-
-
-
-.profile-pic {
-  background: url('../images/default_agent.png') center center no-repeat;
-  width: 27px;
-  height: 26px;
-  vertical-align: top;
-  visibility: hidden;
-  margin-left: 0px;
-}
-
-.profile-pic img{
-  width: 25px;
-  height: 24px;
-  margin: 1px 1px 0;
-}
-
-.profile-pic-status {
-  width: 25px;
-  height: 3px;
-  padding: 1px;
-  float: left;
-}
-
-.profile-icon {
-  display: block;
-  width: 54px;
-  height: 35px;
-  float: right;
-  margin-top:11px;
-  cursor: hand !important;
-  cursor: pointer;
-
-}
-.profile-icon.off {
-  background: url('../images/agent_state/icon_profile_off.png') right top no-repeat;
-}
-.profile-icon.on {
-  background: url('../images/agent_state/icon_profile_on.png') right top no-repeat;
-}
-
-.profile-more-info {
-  margin-left: 27px !important;
-  overflow: visible;
-  padding-top: 14px;
-}
-.profile-more-info.editing {
-  margin-left: 10px !important;
-  /*  min-height: 260px; */
-  font-size:13px;
-}
 
 .gadget-editing-buttons
 {
@@ -1747,56 +1134,6 @@ div.session-button-inner > i.icon-stop
   margin-right:10px;
   line-height: 10px;
 }
-
-#edit-gadget-pencil
-{
-  display: block;
-  height: 13px;
-  width: 13px;
-  background-image: url('../images/agent_state/13x13_edit.png');
-  background-repeat: no-repeat;
-  position: relative;
-  top: -3px;
-  left:5px;
-}
-
-
-.profile-more-info input {
-  /* border: 1px solid #9E9E9E; */
-  display:inline-block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
-  height: 20px;
-  margin-left: 3px;
-  box-shadow: #EEEEEE;
-  width: 90px;
-  font-size: 12px;
-  text-indent: 2px;
-}
-.profile-more-info input#internal
-{
-  width: 100px;
-}
-.profile-more-info input#direct
-{
-  width: 108px;
-}
-.profile-more-info input#cell
-{
-  width: 120px;
-}
-.profile-more-info input#email
-{
-  width: 146px;
-}
-.profile-more-info input.address
-{
-  width: 145px;
-}
-
 
 
 .session-label-text
@@ -1824,12 +1161,6 @@ div.info-label-text
 }
 
 
-#agent-state-gadget .editable-box
-{
-  background-color: #E1F2FA;
-  padding-top: 10px;
-}
-
 .info-label {
   color: #9E9E9E;
   margin:0;
@@ -1849,104 +1180,13 @@ div.info-label-text
   min-height: 500px;
   }*/
 
-  #agent-state-gadget .profile-label
-  {
-    color: #9E9E9E;
-    font-weight: normal;
-    word-wrap: break-word;
-  }
-  #agent-state-gadget .profile-value
-  {
-    color: #0090CA;
-    font-weight: normal;
-    word-wrap: break-word !important;
-    text-transform: none;
-  }
 
-  #agent-state-reason a.dropdown-toggle
-  {
-    width: 64px !important;
-  }
 
-  #agent-state-reason ul.dropdown-menu,
-  #agent-state-reason ul.dropdown-menu li
-  {
-    width: 64px !important;
-    min-width: 0px !important;
-    max-width: 64px !important;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  #agent-state-reason ul.dropdown-menu li a
-  {
-    padding-left: 3px;
-    padding-right: 3px;
-  }
-
-  .padded-bottom
-  {
-    padding-bottom: 10px;
-  }
-
-  /* Agent State - config */
-  #config-details {
-    padding: 14px;
-  }
-  #config-details label {
-    display: block;
-    float: none;
-    width: 100%;
-  }
 
   /* add blue background for boxes that are being edited */
   .editbox {
     background: #DBEFFA;
   }
-
-  /* Current Session */
-  #ags-buttons {
-    display: block; clear: both; overflow: auto;
-    margin: 0 0 14px 0;
-  }
-  #ags-state {
-    display: block;
-    float: left;
-    width: 55px;
-    height: 55px;
-    border: 0;
-    margin: 0 14px 10px 0;
-    text-indent: -9999px;
-  }
-
-  #ags-state.start {
-    background: url('../images/agent_state/start-session.png') 0 0 no-repeat;
-  }
-  #ags-state.stop {
-    background: url('../images/agent_state/stop-session.png') 0 0 no-repeat;
-  }
-  #ags-state.stop_off {
-    background: url('../images/agent_state/stop-session_off.png') 0 0 no-repeat;
-  }
-
-  #ags-cursession span.label {
-    display: block;
-    width: 130px;
-    float: left;
-  }
-
-  #ags-ring {
-    font-size: 15px;
-    width: 120px;
-    vertical-align: top;
-    margin-left: 16px;
-    margin-bottom: 10px;
-    padding-left: 0px;
-    padding-top: 4px;
-  }
-
-
-
-
 
   /* AGENT MANAGER */
 
@@ -2025,43 +1265,6 @@ ul.dropdown-menu #last-hour-dropdown
 }
 
 
-/*
-#table_agentstates, #table_agentstatesTime {
-  margin: 7px 0;
-  border-collapse: separate;
-  border-spacing: 5px;
-  border-collapse: expression('separate', cellSpacing = '1px');
-}
-#table_agentstates thead td, #table_agentstatesTime thead td {
-  font-size: 9pt;
-  font-weight: normal;
-}
-#table_agentstates td, #table_agentstatesTime td {
-  text-align: center;
-  padding: 5px;
-  font-weight: bold;
-}
-#table_agentstates td {
-  width: 15%;
-}
-#table_agent {
-  margin: -7px 0 0 0;
-}
-*/
-#ags-agents-filter {
-  max-width: 250px;
-}
-#ags-agents-filter p {
-  font-size: 9pt;
-  margin: 14px 0 0 0;
-}
-#filter_agent_media input {
-  display: none;
-}
-#filter_agent_media label {
-  width: 23px;
-  margin-right: 5px;
-}
 .ico-phone, .ico-email, .ico-chat {
   display: block;
   width: 23px; height: 23px;
@@ -2114,7 +1317,6 @@ ul.dropdown-menu #last-hour-dropdown
 
 
 /* ALL GADGETS */
-#agent-state-gadget > div.gadget > div.gadget-header,
 #session-manager-gadget > div.gadget > div.gadget-header
 {
   margin-bottom: 6px;
@@ -2453,7 +1655,6 @@ div#outbound-call-gadget
 }
 
 /* Disable responsive resizing */
-div#agent-state-gadget,
 div#outbound-call-gadget
 {
   width: 260px !important;
