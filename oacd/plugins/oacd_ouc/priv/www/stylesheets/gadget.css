@@ -366,24 +366,6 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 
-/** OUTLINE **/
-.r
-{
-  border:1px solid red;
-}
-
-.g
-{
-  border:1px solid green;
-}
-
-.b
-{
-  border:1px solid blue;
-}
-
-
-
 
 .gadget-row-tight
 {
@@ -743,47 +725,11 @@ div.info-label-text
     background: #DBEFFA;
   }
 
-  /* AGENT MANAGER */
-
-
-  .sub_block {
-    display: block;
-    overflow: auto;
-    float: left;
-    clear: none;
-    margin-right: 14px;
-    /* border: 1px solid #000; */
-  }
-  .sub_block h5, #table_agent thead {
-    background: #E6E6E6;
-    font-size: 9pt;
-  }
-  .last_block {
-    margin: 0;
-  }
-
-  .profile-name ul li {
-    border-bottom: 1px solid #b4b4b4;
-    padding: 14px 0;
-  }
-  .profile-name ul li:last-child {
-    border: 0;
-  }
-
-  .profile-label
-  {
-    font-size:13px;
-    font-weight: bold;
-  }
-
-  .profile-text
-  {
-    font-size:13px;
-  }
 
 
 
 
+/*
 #last-hour-dropdown
 {
   min-width: 136px;
@@ -805,7 +751,7 @@ ul.dropdown-menu #last-hour-dropdown
 {
   max-width: 136px;
 }
-
+*/
 
 .btn.btn-primary,
 .btn.null
@@ -820,244 +766,8 @@ ul.dropdown-menu #last-hour-dropdown
 }
 
 
-.ico-phone, .ico-email, .ico-chat {
-  display: block;
-  width: 23px; height: 23px;
-  float: left;
-  text-indent: -9999px;
-  cursor: pointer;
-}
-.ico-phone {
-  background: url('../images/agent_state/icon_phone_off.png');
-}
-.ico-phone {
-  background: url('../images/agent_state/icon_phone_off.png');
-}
-.ico-email {
-  background: url('../images/agent_state/icon_mail_off.png');
-}
-.ico-chat {
-  background: url('../images/agent_state/icon_voicemail.png');
-}
-
-
-
-/* table_agent */
-#table_agent td {
-  text-align: center;
-  font-weight: bold;
-}
-.td_agentAgent {
-  font-size: 9pt;
-  text-align: left !important;
-  font-weight: normal !important;
-}
-.td_agentAgent_name {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 7px;
-}
-.td_agentAgent_profile {
-  font-weight: bold;
-}
-.td_agentAgent p {
-  margin-left: 45px;
-}
-.td_agentState {
-  max-width: 220px;
-  font-weight: normal !important;
-  text-align: left !important;
-  font-size: 8pt;
-}
-
 
 /* ALL GADGETS */
-#session-manager-gadget > div.gadget > div.gadget-header
-{
-  margin-bottom: 6px;
-}
-
-
-/* SESSION MANAGER */
-
-#session-manager {
-  font-size: 9pt;
-  min-height: 190px;
-}
-
-
-#session-manager-session-state {
-  display: block;
-  width: 90px;
-  height: 120px;
-  margin-right: 8px;
-  float:left;
-}
-#session-manager-session-state.idle {
-  background: url('../images/session_manager/90x120_idle.png') 0 0 no-repeat;
-}
-#session-manager-session-state.incoming {
-  background: url('../images/session_manager/90x120_incoming.png') 0 0 no-repeat;
-}
-#session-manager-session-state.outgoing {
-  background: url('../images/session_manager/90x120_outgoing.png') 0 0 no-repeat;
-}
-#session-manager-session-state.precall {
-  background: url('../images/session_manager/90x120_precall.png') 0 0 no-repeat;
-}
-#session-manager-session-state.released {
-  background: url('../images/session_manager/90x120_released.png') 0 0 no-repeat;
-}
-#session-manager-session-state.session {
-  background: url('../images/session_manager/90x120_session.png') 0 0 no-repeat;
-}
-#session-manager-session-state.wrap {
-  background: url('../images/session_manager/90x120_wrap.png') 0 0 no-repeat;
-}
-
-#session-manager-icons {
-  margin-left: 0px;
-}
-div#session-activity
-{
-}
-
-#session-activity-icon, #session-logo {
-  width: 55px;
-  height: 55px;
-  display: block;
-  margin-right: 8px;
-}
-
-div#session-status
-{
-  width: 93px !important;
-  margin-top: 3px !important;
-}
-
-#session-call-box
-{
-  margin-left: 0px;
-}
-
-#session-client-info
-{
-  line-height:18px;
-}
-
-#session-client:
-{
-  margin-top:5px;
-  clear:both;
-}
-
-#session_manager-details
-{
-  margin-left: 0px;
-}
-
-#session-logo {
-  background: url('../images/default_client.png') 0 0 no-repeat;
-  background-size: cover;
-  width: 55px;
-  height: 55px;
-  border:1px solid #EEEEEE;
-  margin-top:7px;
-}
-
-#session-logo img {
-  width: 53px;
-  height: 53px;
-}
-
-#session-activity-icon.session-call {
-  background: url('../images/session_manager/55x55_media_call.png') 0 0 no-repeat;
-}
-
-#session-manager-time {
-  display: block;
-  height: 55px;
-  font-size: 18pt;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 5px;
-  background: #DBEFFA;
-}
-
-#session-manager-time.warn {
-  background: #FCBED7;
-}
-
-#session-running-time {
-  display: block;
-  padding-top: 20px;
-}
-#sessionManager-stateButton {
-  display: block;
-  width: 118px; height: 55px;
-  text-indent: -9999px;
-}
-#sessionManager-stateButton.on {
-  background: url('../images/session_manager/118x55_done_on.png');
-}
-#sessionManager-stateButton.off {
-  background: url('../images/session_manager/118x55_done_off.png');
-}
-#call-disposition {
-  position: relative;
-  top: 14px;
-}
-
-
-/* transfer */
-
-.transfer-icon {
-  display: block;
-  width: 23px; height: 23px;
-  margin-right: 8px;
-}
-.transfer-icon.off {
-  background: url('../images/session_manager/icon_transfer_off.png');
-}
-.transfer-icon.off {
-  background: url('../images/session_manager/icon_transfer_on.png');
-}
-
-#transfer-form-agent-search {
-  height: 24px;
-}
-#transfer-form-agent-search select {
-  width: 100%;
-
-}
-#transfer-form-agent-search input {
-  width: 81.5%;
-  margin: 8px 0;
-}
-
-#transfer-table {
-  width: 100%;
-  font-size: 9pt;
-}
-
-.call-status-icon {
-  display: block;
-  width: 10px; height: 10px;
-  float: left;
-  margin: 3px 8px 0 0;
-}
-.call-status.idle .call-status-icon {
-  background: url('../images/session_manager/10x10_idle.png') 0 0 no-repeat;
-}
-.call-status.released .call-status-icon {
-  background: url('../images/session_manager/10x10_released.png') 0 0 no-repeat;
-}
-.call-status.precall .call-status-icon {
-  background: url('../images/session_manager/10x10_precall.png') 0 0 no-repeat;
-}
-.call-status.session .call-status-icon {
-  background: url('../images/session_manager/10x10_session.png') 0 0 no-repeat;
-}
 
 /** bootstrap.css overrides as follows **/
 
@@ -1200,19 +910,6 @@ border:5px solid red;*/
   min-width: 820px !important;
   margin-right: auto !important;
   margin-left: auto !important;
-}
-
-/* Disable responsive resizing */
-
-div#session-manager-gadget,
-div#my-statistics-gadget
-{
-  width:540px !important;
-}
-div#agent-manager-gadget,
-div#queue-manager-gadget
-{
-  width: 820px !important;
 }
 
 .nav-pills > li > a {

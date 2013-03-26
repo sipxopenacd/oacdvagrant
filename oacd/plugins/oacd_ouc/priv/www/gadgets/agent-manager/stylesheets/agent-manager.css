@@ -3,6 +3,12 @@
   visibility: visible !important;
 }
 
+/* Disable responsive resizing */
+div#agent-manager-gadget
+{
+  width: 820px !important;
+}
+
 
 .styled.last-hour,
 .styled.last-hour select
@@ -1219,5 +1225,22 @@ div#outbound-call-gadget
   background: url('../images/agent_state/icon_profile_on.png') right top no-repeat;
 }
 
-}
+  .profile-name ul li {
+    border-bottom: 1px solid #b4b4b4;
+    padding: 14px 0;
+  }
+  .profile-name ul li:last-child {
+    border: 0;
+  }
+
+  .profile-label
+  {
+    font-size:13px;
+    font-weight: bold;
+  }
+
+  .profile-text
+  {
+    font-size:13px;
+  }
 
