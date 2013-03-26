@@ -28,10 +28,7 @@ td, th, tr
 
 
 
-.ico-outgoing-call {
-  background: url('../images/session_manager/90x120_outgoing.png') 0 0 no-repeat;
-  height: 110px;
-}
+
 
 .outbound-text-dialer input
 {
@@ -1249,13 +1246,6 @@ border:5px solid red;*/
   min-height: 1px;
   margin-left: 20px;
 }
-
-div#agent-manager-gadget,
-div#outbound-call-gadget
-{
-  margin-left: 0px !important;
-}
-
 /* IMPORTANT */
 /* set a max-width for horizontal fluid layout and make it centered */
 .container-fluid {
@@ -1276,10 +1266,7 @@ div#outbound-call-gadget
 }
 
 /* Disable responsive resizing */
-div#outbound-call-gadget
-{
-  width: 260px !important;
-}
+
 div#session-manager-gadget,
 div#my-statistics-gadget
 {
